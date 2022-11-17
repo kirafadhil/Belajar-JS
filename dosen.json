@@ -1,0 +1,20 @@
+[
+    {
+        "nama":"Diana",
+        "nim":"2112510066",
+        "jurusan":"SI",
+        "idDosenWali":1
+    },
+    {
+        "nama":"Balqis",
+        "nim":"2112510065",
+        "jurusan":"ILKOM",
+        "idDosenWali":2
+    },
+    {
+        "nama":"Joli",
+        "nim":"2112510105",
+        "jurusan":"TI",
+        "idDosenWali":3
+    }
+]
