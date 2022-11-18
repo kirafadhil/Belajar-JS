@@ -1,46 +1,34 @@
-// Node Manipulation
-// document.createElement()
-// document.createTextNode()
-// node.appenChild()
-// node.insertBefore()
-// parentNode.removeChild()
-// parentNode.replaceChild()
-// ...
+// const p3 = document.querySelector('.p3');
 
-// buat elemen baru
-const pBaru = document.createElement('p');
-const teksPBaru = document.createTextNode('Paragraf Baru');
-// simpan tulisan ke dalam paragraf
-pBaru.appendChild(teksPBaru);
+// function nyala () {
+//     p2.style.backgroundColor = 'salmon';
+// }
 
-// simpan pBaru di akhir section A
-const secA = document.querySelector('section#a');
-secA.appendChild(pBaru);
+// const p2 = document.querySelector('.p2');
+// p2.onclick = nyala;
 
+// const p4 = document.querySelector('section#b p');
+// p4.addEventListener('click', function(){
+//     const ul = document.querySelector('section#b ul');
+//     const liBaru = document.createElement('li');
+//     const teksLiBaru = document.createTextNode('item baru');
+//     liBaru.appendChild(teksLiBaru);
+//     ul.appendChild(liBaru);
+// });
 
-const liBaru = document.createElement('li');
-const teksLiBaru = document.createTextNode('Item Baru');
-liBaru.appendChild(teksLiBaru);
+const p3 = document.querySelector('.p3');
+// p3.onclick = function(){
+//     p3.style.backgroundColor = 'lightgreen';
+// }
+// p3.onclick = function(){
+//     p3.style.color = 'red';
+// }
 
-const ul = document.querySelector('section#b ul');
-const li2 = ul.querySelector('li:nth-child(2)');
-ul.insertBefore(liBaru, li2);
+p3.addEventListener('mouseenter', function(){
+    p3.style.backgroundColor = 'lightgreen';
+    p3.style.color = 'red';
+});
 
-
-
-
-const link = document.getElementsByTagName('a')[0];
-secA.removeChild(link);
-
-const secB = document.getElementById('b');
-const p4 = secB.querySelector('p');
-
-const h2Baru = document.createElement('h2');
-const teksH2Baru = document.createTextNode('judul baru cnah');
-h2Baru.appendChild(teksH2Baru);
-
-secB.replaceChild(h2Baru, p4);
-
-pBaru.style.backgroundColor = 'lightgreen';
-liBaru.style.backgroundColor = 'lightgreen';
-h2Baru.style.backgroundColor = 'lightgreen';
+p3.addEventListener('mouseleave', function(){
+    p3.style.backgroundColor = 'white';
+});
