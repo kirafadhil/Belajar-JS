@@ -1,39 +1,25 @@
-// DOM selection Method
-// getElementById() menghasilkan elemen
-// getElementsByTagName() menghasilkan HTMLCollection
-// getElementsByClassName() menghasilkan HTMLCollection
-// querySelector() menghasilkan elemen
-// querySelectorAll() menghasilkan nodeList
+// Element Manipulation
+// element.innerHTML
+// element.style.<property>
+// element.setAttribute()
+// element.classList
+// ...
 
-// DOM SELECTION
-// const jdl = document.getElementById("judul");
-// jdl.style.color = "red";
-// jdl.style.backgroundColor = "#ccc";
-// jdl.innerHTML = "Muhammad Naufal Fadhil Harvian";
+// const jdl = document.getElementById('judul');
+// jdl.innerHTML = "<em>Muhammad Naufal Fadhil Harvian<em>";
 
-// const p = document.getElementsByTagName("p");
-// for (let i = 0; i < p.length; i++) {
-//   p[i].style.backgroundColor = "salmon";
-// }
-
-// const p1 = document.getElementsByClassName("p1")[0];
-// p1.innerHTML = "ini dirubah dari javascript";
+// const sectionA = document.querySelector('section#a');
+// sectionA.innerHTML = 'Hello Madafaka!';
 
 // const judul = document.querySelector('#judul');
-// judul.innerHTML = 'Mekeng!';
+// judul.style.color = 'salmon';
 
-// const p4 = document.querySelector('#b p');
-// p4.style.color='green';
-// p4.style.fontSize = '30px';
+// const judul = document.getElementsByTagName('h1')[0];
+// const a = document.querySelector('section#a a');
+// a.setAttribute('id','link');
+// a.getAttribute('id');
+// a.removeAttribute('href');
 
-// const li2 = document.querySelector('section#b ul li:nth-child(2)');
-// li2.style.backgroundColor = 'salmon';
-
-// const p = document.querySelectorAll('p');
-// for(let i=0;i<p.length;i++){
-//     p[i].style.fontSize = '35px';
-// }
-
-const sectionB = document.getElementById("b");
-const p4 = sectionB.querySelector("p");
-p4.style.backgroundColor = "orange";
+const p2 = document.querySelector('.p2');
+// p2.classList.add('label');
+p2.classList.toggle('biru-muda');
