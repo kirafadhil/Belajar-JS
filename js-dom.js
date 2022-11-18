@@ -1,25 +1,46 @@
-// Element Manipulation
-// element.innerHTML
-// element.style.<property>
-// element.setAttribute()
-// element.classList
+// Node Manipulation
+// document.createElement()
+// document.createTextNode()
+// node.appenChild()
+// node.insertBefore()
+// parentNode.removeChild()
+// parentNode.replaceChild()
 // ...
 
-// const jdl = document.getElementById('judul');
-// jdl.innerHTML = "<em>Muhammad Naufal Fadhil Harvian<em>";
+// buat elemen baru
+const pBaru = document.createElement('p');
+const teksPBaru = document.createTextNode('Paragraf Baru');
+// simpan tulisan ke dalam paragraf
+pBaru.appendChild(teksPBaru);
 
-// const sectionA = document.querySelector('section#a');
-// sectionA.innerHTML = 'Hello Madafaka!';
+// simpan pBaru di akhir section A
+const secA = document.querySelector('section#a');
+secA.appendChild(pBaru);
 
-// const judul = document.querySelector('#judul');
-// judul.style.color = 'salmon';
 
-// const judul = document.getElementsByTagName('h1')[0];
-// const a = document.querySelector('section#a a');
-// a.setAttribute('id','link');
-// a.getAttribute('id');
-// a.removeAttribute('href');
+const liBaru = document.createElement('li');
+const teksLiBaru = document.createTextNode('Item Baru');
+liBaru.appendChild(teksLiBaru);
 
-const p2 = document.querySelector('.p2');
-// p2.classList.add('label');
-p2.classList.toggle('biru-muda');
+const ul = document.querySelector('section#b ul');
+const li2 = ul.querySelector('li:nth-child(2)');
+ul.insertBefore(liBaru, li2);
+
+
+
+
+const link = document.getElementsByTagName('a')[0];
+secA.removeChild(link);
+
+const secB = document.getElementById('b');
+const p4 = secB.querySelector('p');
+
+const h2Baru = document.createElement('h2');
+const teksH2Baru = document.createTextNode('judul baru cnah');
+h2Baru.appendChild(teksH2Baru);
+
+secB.replaceChild(h2Baru, p4);
+
+pBaru.style.backgroundColor = 'lightgreen';
+liBaru.style.backgroundColor = 'lightgreen';
+h2Baru.style.backgroundColor = 'lightgreen';
