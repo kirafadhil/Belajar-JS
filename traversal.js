@@ -6,7 +6,7 @@
 // });
 
 // DOM TRAVERSAL
-const x = document.querySelectorAll('.close');
+const close = document.querySelectorAll(".close");
 
 // for( let i=0; i<x.length; i++){
 //     x[i].addEventListener('click', function(event){
@@ -15,8 +15,15 @@ const x = document.querySelectorAll('.close');
 //     });
 // }
 
-x.forEach((el)=> {
-    el.addEventListener('click', function(e){
-        e.target.parentElement.style.display = 'none';
-    });
+close.forEach((el) => {
+  el.addEventListener("click", function (e) {
+    e.target.parentElement.style.display = "none";
+    e.preventDefault();
+  });
 });
+
+
+
+
+// const nama = document.querySelector('.nama');
+// console.log(nama.nextElementSibling.nextElementSibling);
