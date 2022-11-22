@@ -14,3 +14,14 @@ function printName(): void {
 }
 
 printName()
+
+
+////////////////////
+
+function perkalian(val1:number,val2:number):number {
+    return val1*val2
+}
+
+const result = perkalian(8,5)
+console.log(result)
+
