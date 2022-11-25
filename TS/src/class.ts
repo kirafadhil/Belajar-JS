@@ -29,6 +29,7 @@ class Admin extends User {
     read: boolean = true;
     write: boolean = true;
     phone: string;
+    private _email: string="";
 
     constructor(phone:string, name:string, age:number){
         super(name, age);
@@ -40,6 +41,17 @@ class Admin extends User {
             read: this.read,
             write: this.write
         };
+    };
+
+    set email(value:string){
+        if(value.length < 5){
+            this._email = 'email salah coeg';
+        } else {
+            this.email = value;
+        }
+    }
+    get email():string {
+        return this._email;
     }
 }
 
@@ -48,3 +60,8 @@ admin.getRole();
 admin.getName();
 admin.setName('karin');
 admin.phone;
+
+admin.email = 'a@gmail.com';
+console.log(admin.email);
+
+admin._email;
