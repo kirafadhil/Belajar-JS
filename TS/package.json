@@ -6,7 +6,7 @@
   "scripts": {
     "tsc": "rm -rf build/ && tsc",
     "ts": "rm -rf build/ && tsc -w",
-    "dev": "yarn nodemon ./build/interface.js"
+    "dev": "yarn nodemon ./build/generic.js"
   },
   "devDependencies": {
     "typescript": "^4.9.3"
